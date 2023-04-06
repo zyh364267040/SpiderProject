@@ -1,0 +1,20 @@
+# 起始的url
+# START_URL = 'https://www.glassdoor.com.hk/Reviews/Apple-Reviews-E1138_P%d.htm'
+# START_URL = 'https://www.glassdoor.com/Reviews/Amazon-Reviews-E6036_P%d.htm'
+
+# 公司名称\n
+# COMPANY_NAME = 'Amzn'
+# 这里填reviews总数
+
+# REVIEWS_PAGE = 122657
+# 设置一次运行程序爬取多少页,0为不限制,抓取所有
+# GET_PAGE = 0
+
+# 文件写入格式
+# 起始的url, 公司名称, reviews总数, 设置一次运行程序爬取多少页,0为不限制,抓取所有(按照这个格式往下写, 注意开头不要加#)
+# https://www.glassdoor.com.hk/Reviews/Apple-Reviews-E1138_P%d.htm, Amzn, 122657, 0
+https://www.glassdoor.com.hk/Reviews/Apple-Reviews-E1138_P%d.htm, Amzn, 122657, 0
+https://www.glassdoor.com.hk/Reviews/Apple-Reviews-E1138_P%d.htm, Amzn, 122657, 0
+https://www.glassdoor.com.hk/Reviews/Apple-Reviews-E1138_P%d.htm, Amzn, 122657, 0
+https://www.glassdoor.com.hk/Reviews/Apple-Reviews-E1138_P%d.htm, Amzn, 122657, 0
+https://www.glassdoor.com.hk/Reviews/Apple-Reviews-E1138_P%d.htm, Amzn, 122657, 0
