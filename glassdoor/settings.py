@@ -6,8 +6,8 @@
 WEBDRIVER_PATH = '/Users/zhouyanhui/Library/CloudStorage/OneDrive-个人/chromedriver'
 
 # 登录glassdoor的账号密码
-USERNAME = '759388790@qq.com'
-PASSWORD = 'erhui7169'
+USERNAME = ''
+PASSWORD = ''
 
 # 起始的url,
 START_URL = 'https://www.glassdoor.com/Reviews/Apple-Reviews-E1138_P%d.htm'
