@@ -63,8 +63,7 @@ def get_data(url):
 
 def parse_data(res):
     # 使用正则获取reviews
-    pattern = r',"reviews":(.*?)},"fe'
-    pattern = r',"reviews":(.*?)},"'
+    pattern = r',"reviews":(.*?)},"pa'
     reviews = re.findall(pattern, res)[0]
     reviews = json.loads(reviews)
 
