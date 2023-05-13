@@ -12,6 +12,8 @@ excel
 
 .idea
 
+.DS_Store
+
 # Distribution / packaging
 .Python
 build/
