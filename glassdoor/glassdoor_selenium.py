@@ -128,6 +128,7 @@ def get_and_save_data():
     for page in range(start_page, end_page):
         # 拼接每页的url
         url = START_URL % page
+        url = 'https://www.glassdoor.com/Reviews/DXC-Technology-Reviews-E1603125_P377.htm'
 
         # 登录
         # print('开始登录...')
@@ -163,8 +164,11 @@ def get_and_save_data():
                 date = date_list[1] + '/' + date_list[2] + '/' + date_list[0]
                 # print(date)
 
-                employee_status = li_list[index].xpath('./div/div/div[1]/div[1]/span/text()')[0]
-                employee_status = employee_status.split(',')[0]
+                employee_status = li_list[index].xpath('./div/div/div[1]/div[1]/span/text()')
+                if employee_status:
+                    employee_status = employee_status[0].split(',')[0]
+                else:
+                    employee_status = ''
 
                 sheet[f'A{i}'] = date
                 sheet[f'B{i}'] = employee_status
