@@ -128,7 +128,6 @@ def get_and_save_data():
     for page in range(start_page, end_page):
         # 拼接每页的url
         url = START_URL % page
-        url = 'https://www.glassdoor.com/Reviews/DXC-Technology-Reviews-E1603125_P377.htm'
 
         # 登录
         # print('开始登录...')
