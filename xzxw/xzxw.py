@@ -56,10 +56,12 @@ def post_data(url, page):
             return res
 
 
-def save_docx(date, title, content):
+def save_docx(date, title, content, sourcename):
     doc = Document()
     # 写入标题
     doc.add_heading(title, level=0)
+    # 写入来源
+    doc.add_paragraph(f'来源：{sourcename}')
     # 写入正文
     doc.add_paragraph(content)
     print(date+title)
@@ -74,8 +76,10 @@ def save_docx(date, title, content):
 def xzxw():
     url = 'https://search.xzxw.com/xy/Search.do'
     page = 1
-    page = 230
+    # page = 230
     while True:
+        if page > 235:
+            break
         # 发送请求,获取数据
         res = post_data(url, page)
         print(res.text)
@@ -83,12 +87,12 @@ def xzxw():
         res_list = json.loads(res.text)['article']
         for res_dict in res_list:
             date = res_dict['date']
-            if int(date.replace('-', '')) < 20000000:
-                break
+            # if int(date.replace('-', '')) < 20000000:
             title = res_dict['title']
             enpcontent = res_dict['enpcontent']
+            sourcename = res_dict['sourcename']
 
-            save_docx(date, title, enpcontent)
+            save_docx(date, title, enpcontent, sourcename)
 
         page += 1
 
