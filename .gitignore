@@ -9,6 +9,7 @@ __pycache__/
 excel
 *.xlsx
 *.png
+/china_college_info_spider/college_info.csv
 
 .idea
 
